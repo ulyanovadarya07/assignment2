@@ -3,9 +3,9 @@ public class Student {
     private String name;
     private String surname;
     private double gpa;
-    /*public Student(){
 
-    }*/
+    public Student() {}
+
     public Student(String name, String surname, double gpa){
         this.name = name;
         this.surname = surname;
@@ -15,8 +15,12 @@ public class Student {
     public int getId(){
         return id_gen;
     }
-    public double GetGpa(){
+
+    public double getGpa(){
         return gpa;
     }
-    public
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
 }
