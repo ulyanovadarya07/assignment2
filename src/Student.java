@@ -1,4 +1,5 @@
 public class Student extends Person {
+    private static final double stipend = 36660.00;
     private double gpa;
 
     public Student() {
@@ -16,6 +17,16 @@ public class Student extends Person {
 
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+
+    @Override
+    public double getPaymentAmount() {
+        return (gpa > 2.67) ? stipend : 0.0;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return Double.compare(this.getPaymentAmount(), other.getPaymentAmount());
     }
 
     @Override
